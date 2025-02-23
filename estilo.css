@@ -1,0 +1,287 @@
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Cabeçalho */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f7f8f8;
+    padding: 10px 10px;
+    text-align: center;
+    z-index: 100; /* Mantém acima do menu */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header img {
+    width: 100px;
+    display: block;
+    margin: auto;
+}
+
+/* Navegação fixa */
+nav {
+    position: fixed;
+    top: 55px; /* Ajuste fino para alinhar logo + menu */
+    left: 0;
+    width: 100%;
+    background-color: #007bff;
+    padding: 12px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+/* Links do menu */
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 28px; /* Ajuste fino para melhorar espaçamento */
+    font-weight: bold;
+    font-size: 14px; /* Mantive a redução da fonte */
+}
+
+nav a:hover {
+    background-color: #0056b3;
+}
+
+/* Ajusta a posição do conteúdo para não ser encoberto pelo menu */
+body {
+    padding-top: 100px;
+}
+
+/* Seção de descrição */
+.descricao {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    padding: 30px;
+   
+}
+
+/* Containers das abas */
+.container {
+    display: none;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px;
+}
+
+
+/* Lista de cursos */
+.lista-cursos {
+    width: 25%;
+    max-height: 500px;
+    overflow-y: auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.lista-cursos h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #004990;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 2px solid #004990;
+    padding-bottom: 5px;
+}
+
+.lista-cursos ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lista-cursos li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.lista-cursos li:hover {
+    background-color: #007bff;
+    color: white;
+    transform: scale(1.02);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.lista-cursos li i {
+    font-size: 18px;
+    color: #004990;
+    transition: color 0.3s;
+}
+
+.lista-cursos li:hover i {
+    color: white;
+}
+
+
+/* Área do vídeo */
+.video-container {
+    width: 70%;
+    text-align: center;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: -20px; /* Move a seção um pouco para cima */
+}
+
+
+#player {
+    width: 100%;
+    max-width: 750px;
+    height: 350px;
+    margin-top: 10px;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 5px;
+    background-color: #004990;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+.imagem-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite quebra de linha */
+    gap: 40px; /* Espaço entre as imagens */
+    padding: 20px;
+    text-align: center;
+}
+
+.imagem-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 320px; /* Define uma largura fixa para cada bloco */
+    text-align: center;
+}
+
+.imagem-box img {
+    width: 300px; /* Largura fixa */
+    height: auto; /* Mantém a proporção original */
+    max-height: 300px; /* Garante que não fique muito alta */
+    object-fit: contain; /* Mantém a imagem sem cortar partes */
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.imagem-box img:hover {
+    transform: scale(1.05);
+}
+
+.imagem-box p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    width: 100%;
+}
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .video-section {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .video-container {
+        width: 100%;
+        text-align: center;
+        background-color: #ffffff;
+        border: 1px solid #ddd;
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+    #player {
+        width: 100%;
+        max-width: 750px;
+        height: 350px;
+        margin-top: 10px;
+    }
+
+    .lista-cursos {
+        width: 30%;
+        max-height: 500px;
+        overflow-y: auto;
+        background-color: #ffffff;
+        border-radius: 8px;
+        padding: 15px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .lista-cursos h2 {
+        text-align: center;
+        margin-bottom: 15px;
+        color: #004990;
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-bottom: 2px solid #004990;
+        padding-bottom: 5px;
+    }
+
+    .lista-cursos ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .lista-cursos li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        padding: 12px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        background-color: #f8f9fa;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+    }
+
+    .lista-cursos li:hover {
+        background-color: #007bff;
+        color: white;
+        transform: scale(1.02);
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    }
+</style>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Treinamentos</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<header>
+    <img src="logo/logo-bracell-papeis.png" alt="Logo">
+</header>
+
+<nav>
+    <a href="index.html" onclick="openTab(event, 'home')">Home</a>
+    <a href="rh.html" onclick="openTab(event, 'rh')">RH</a>
+    <a href="fina.html" onclick="openTab(event, 'financeiro')">Financeiro</a>
+    <a href="ti.html" onclick="openTab(event, 'ti')">TI</a>
+</nav>
+
+<section class="descricao">
+    <h1>Portal de Treinamentos</h1>
+    <p>Este portal é o ponto de partida para aprimorar conhecimentos e desenvolver habilidades específicas para seu setor.</p>
+</section>
+
+<!-- Conteúdo das Abas -->
+<div id="rh" class="container">
+    <!-- Lista de cursos -->
+    <section class="lista-cursos">
+        <h2>Lista de Cursos</h2>
+        <ul>
+            <li onclick="mostrarVideo('videos/Untitled.mp4', 'Introdução ao Financeiro', 'Treinamento sobre as funções básicas do departamento de Recursos Humanos.')">Introdução ao RH</li>
+            <li onclick="mostrarVideo('videos/Untitled1.mp4', 'Processos de Finança', 'Como conduzir processos seletivos de forma eficaz.')">Processos de Recrutamento</li>
+            <li onclick="mostrarVideo('videos/TI1.mp4', 'Fundamentos de Redes', 'Aprenda os conceitos básicos de redes de computadores.')">Fundamentos de Redes</li>
+            <li onclick="mostrarVideo('videos/TI2.mp4', 'Segurança Cibernética', 'Conheça os princípios essenciais para proteger dados e sistemas.')">Segurança Cibernética</li>
+        </ul>
+    </section>
+    
+    <!-- Área do vídeo -->
+    <section class="video-section">
+        <div class="video-container">
+            <video id="player" controls>
+                <source id="video-source" src="" type="video/mp4">
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
+            <div class="video-title" id="video-title"></div>
+            <div class="video-description" id="video-description"></div>
+        </div>
+    </section>
+</div>
+
+<footer>
+    &copy; 2025 Portal de Treinamentos. Todos os direitos reservados.
+</footer>
+
+<script>
+    function mostrarVideo(url, titulo, descricao) {
+        let videoSource = document.getElementById("video-source");
+        let player = document.getElementById("player");
+        let videoTitle = document.getElementById("video-title");
+        let videoDescription = document.getElementById("video-description");
+
+        videoSource.src = url;
+        player.load(); // Apenas carrega, sem autoplay
+        videoTitle.innerText = titulo;
+        videoDescription.innerHTML = descricao;
+    }
+
+    function openTab(event, tabName) {
+        let tabs = document.getElementsByClassName("container");
+        for (let tab of tabs) {
+            tab.style.display = "none";
+        }
+        document.getElementById(tabName).style.display = "flex";
+    }
+
+    document.getElementById("rh").style.display = "flex";
+</script>
+
+
+</body>
+</html>
